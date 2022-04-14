@@ -1,3 +1,30 @@
+@font-face {
+    font-family: 'balgruf';
+    src: url('balgruf-webfont.woff2') format('woff2'),
+         url('balgruf-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'balgruf';
+    src: url('balgruf_italic-webfont.woff2') format('woff2'),
+         url('balgruf_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'recursivesans';
+    src: url('recursive_vf_1.078-webfont.woff2') format('woff2'),
+         url('recursive_vf_1.078-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+} 
+
 /* General setup */
 
 * {
@@ -38,8 +65,107 @@ header, section, aside, nav, footer {
 /* header and footer */
 
 header, footer {
-  border-top: 5px solid #a66;
-  border-bottom: 5px solid #a66;
+  border-top: 1rem solid #a66;
+  border-bottom: 1rem solid #a66;
 }
 
 /* WRITE YOUR CODE BELOW HERE */
+
+:root {
+  font: normal 10px recursivesans, serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: balgruf, serif;
+  letter-spacing: 0.3rem;
+}
+
+h1 {
+  font-size: 4.7rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+p, ul, ol {
+  line-height: 2.3rem;
+  font-size: 1.5rem;
+  word-spacing: 0.3rem;
+}
+
+ul {
+  list-style-type: square;
+}
+
+section h2 + p {
+  text-indent: 20px;
+}
+
+a {
+  outline: none;
+}
+
+a:link {
+  color: #aa6666;
+}
+
+a:visited {
+  color: #7664aa;
+}
+
+a:focus {
+  color: #aaaa64;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #64aa99;
+}
+
+a:active {
+  color: #e12d2d;
+}
+
+a[href^="http"] {
+  background: url('external-link-52.png') no-repeat 100% 0 / 1.2rem 1.2rem;
+  padding-inline-end: 1.8rem;
+}
+
+nav ul {
+  padding-inline-start: 0;
+  list-style-type: none;
+}
+
+nav ul li a,
+nav ul li a:link,
+nav ul li a:visited,
+nav ul li a:focus {
+  display:inline-block;
+  width: 100%;
+  text-align: center;
+  line-height: 4.5rem;
+  border: 0.1rem solid #aa6666;
+  margin-block-end: 1.9rem;
+  text-decoration: none;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #aa6666;
+}
+
+nav ul li a:focus {
+  color: #aaaa64;
+  border: 0.1rem solid #aaaa64;
+}
+
+nav ul li a:hover {
+  color: #64aa99;
+  border: 0.1rem solid #64aa99;
+}
+
+
+nav ul li a:active {
+  color: #e12d2d;
+  border: 0.1rem solid #e12d2d;
+}
